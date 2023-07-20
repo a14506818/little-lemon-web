@@ -1,0 +1,25 @@
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #495e57;
+    color: antiquewhite;
+}
+
+main div {
+    width: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+main img {
+    display: inline;
+}
