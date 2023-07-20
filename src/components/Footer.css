@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer div {
+    margin: 1rem;
+}
+
+footer div h3 {
+    font-size: 1rem;
+}
+
+footer a {
+    font-size: 0.6rem;
+}

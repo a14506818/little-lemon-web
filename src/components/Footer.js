@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from '../assets/restauranfood.jpg';
+import './Footer.css';
 
 const navList = [
   'Home',
