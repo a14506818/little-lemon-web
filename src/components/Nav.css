@@ -2,19 +2,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 1rem;
     padding: 0.5rem;
+    width: 60vw;
+    min-width: 600px;
+    max-width: 800px;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-nav ul li a {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
+
 
