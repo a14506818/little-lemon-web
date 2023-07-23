@@ -1,72 +1,195 @@
 .heroBG {
-    width: 100vw;
-    background-color: #495e57;
+  width: 100vw;
+  background-color: #495e57;
 }
 
 .hero {
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: antiquewhite;
-    padding: 1rem 0 1rem 0;
-    margin: auto;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: antiquewhite;
+  padding: 1rem 0 1rem 0;
+  margin: auto;
 }
 
 .hero div {
-    width: 300px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: start;
+  width: 300px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.hero  h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    color: #f4ce14;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #f4ce14;
 }
 
-.hero  img {
-    display: inline;
+.hero button {
+  margin-top: 2rem;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #f4ce14;
+  color: black;
+}
+
+.hero img {
+  display: inline;
 }
 
 .specialsBG {
-    width: 100vw;
-    background-color: #fbdabb;
+  width: 100vw;
+  background-color: #fbdabb;
 }
 
 .specials {
-    width: 800px;
-    height: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .specials .title {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem;  
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.specials .title h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.specials .title button {
+  margin-top: 2rem;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #f4ce14;
+  color: black;
 }
 
 .specials .cards {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .specials .card {
-    width: 240px;
-    background-color: #dedfee;
-    border-radius: 1rem;
+  width: 250px;
+  background-color: #dedfee;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 0.5rem;
 }
 
 .specials .card img {
-    object-fit: cover;
-    height: 45%;
-    border-radius: 1rem;
+  object-fit: cover;
+  height: 40%;
+  border-radius: 1rem;
+}
+
+.specials .card .cardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials .card .cardTitle h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.specials .card .cardTitle h4 {
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: red;
+}
+
+.specials .card p {
+  padding: 1rem 0 1rem 0;
+  flex: 1 1 auto;
+}
+
+.specials .card a {
+  width: 150px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #f4ce14;
+}
+
+.specials .card .cardTitle,
+.specials .card p,
+.specials .card a {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.testimonialsBG {
+  width: 100vw;
+  background-color: #333333;
+}
+
+.testimonials {
+  color: white;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.testimonials .cards {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonials .card {
+  background-color: #dedfee;
+  color: black;
+  width: 180px;
+  height: 150px;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.aboutBG {
+  width: 100vw;
+  background-color: #fbdabb;
+}
+
+.about {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .textArea {
+  width: 380px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #495e57;
+}
+.about p {
+  margin-top: 2rem;
 }
