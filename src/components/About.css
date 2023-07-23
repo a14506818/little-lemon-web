@@ -1,0 +1,26 @@
+.aboutBG {
+  width: 100vw;
+  background-color: #fbdabb;
+}
+
+.about {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .textArea {
+  width: 380px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #495e57;
+}
+.about p {
+  margin-top: 2rem;
+}

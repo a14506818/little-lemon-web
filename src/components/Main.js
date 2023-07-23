@@ -4,8 +4,7 @@ import "./Main.css";
 import saladImg from "../assets/greek salad.jpg";
 import bruchettaImg from "../assets/bruchetta.svg";
 import lemonImg from "../assets/lemon dessert.jpg";
-import aboutImg_A from "../assets/Mario and Adrian A.jpg";
-import aboutImg_B from "../assets/Mario and Adrian b.jpg";
+
 
 const Main = () => {
   return (
@@ -84,35 +83,6 @@ const Main = () => {
               </div>
               <h4>Review text</h4>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="aboutBG">
-        <div className="about">
-          <div className="textArea">
-            <h2>Little Lemon</h2>
-            <h3>Chicago</h3>
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit.
-            </p>
-          </div>
-          <div className="imgArea">
-            <img
-              src={aboutImg_A}
-              alt="about img A"
-              width="276px"
-              height="338px"
-            />
-            <img
-              src={aboutImg_B}
-              alt="about img B"
-              width="276px"
-              height="338px"
-            />
           </div>
         </div>
       </div>
