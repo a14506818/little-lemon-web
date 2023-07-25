@@ -5,7 +5,8 @@ import BookingForm from './BookingForm'
 const Booking = () => {
   return (
     <div className='bookingBG'>
-        <BookingForm></BookingForm>
+        <h2>Reservations</h2>
+        <BookingForm/>
     </div>
   )
 }
