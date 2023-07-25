@@ -26,7 +26,9 @@ const BookingForm = () => {
 		},
 		validationSchema: Yup.object().shape({
             res_date: Yup.string().required(),
+            res_time: Yup.string().required(),
             guests: Yup.number().required().positive().integer(),
+            occasion: Yup.string().required(),
 		}),
     });
 
@@ -37,9 +39,9 @@ const BookingForm = () => {
             <Input type='date' id='res-date' placeholder="Select Date" {...formik.getFieldProps("res_date")} />
             <FormErrorMessage>{formik.errors.res_date}</FormErrorMessage>
         </FormControl>
-        <FormControl>
+        <FormControl isInvalid={!!formik.errors.res_time && formik.touched.res_time}>
             <FormLabel htmlFor='res-time'>Choose time</FormLabel>
-            <Select id='res-time' {...formik.getFieldProps("res_time")}>
+            <Select id='res-time' placeholder='select...' {...formik.getFieldProps("res_time")}>
                 <option>17:00</option>
                 <option>18:00</option>
                 <option>19:00</option>
@@ -47,19 +49,21 @@ const BookingForm = () => {
                 <option>21:00</option>
                 <option>22:00</option>
             </Select>
+            <FormErrorMessage>{formik.errors.res_time}</FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={!!formik.errors.guests && formik.touched.guests}>
             <FormLabel htmlFor='guests'>Number of guests</FormLabel>
-            <Input type='number' placeholder='1' min='1' max='10' id='guests' {...formik.getFieldProps("guests")}/>
+            <Input type='number' placeholder='1' min='1' max='10' id='guests' {...formik.getFieldProps("guests")} />
             <FormErrorMessage>{formik.errors.guests}</FormErrorMessage>
         </FormControl>
-        <FormControl>
+        <FormControl isInvalid={!!formik.errors.occasion && formik.touched.occasion}>
             <FormLabel htmlFor='occasion'>Occasion</FormLabel>
-            <Select {...formik.getFieldProps("occasion")}>
+            <Select id='occasion'  placeholder='select...' {...formik.getFieldProps("occasion")}>
                 <option>None</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </Select>
+            <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
         </FormControl>
         <Button mt={4} colorScheme='yellow' type='submit'>Submit</Button>
     </form>
