@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './BookingForm.css'
 import {
     FormControl,
     FormLabel,
     FormErrorMessage,
-    FormHelperText,
+    // FormHelperText,
     Input,
     Select,
     Button,
   } from '@chakra-ui/react'
-import { useFormik, Form } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { fetchAPI, submitAPI } from './Api';
 
 const BookingForm = () => {
+    const [availableTimes, setAvailableTimes] = useState([]);    
+
     const formik = useFormik({
         initialValues: {
 			res_date: '',
@@ -32,6 +35,14 @@ const BookingForm = () => {
 		}),
     });
 
+    useEffect(()=>{
+        if(formik.values.res_date === ''){
+            setAvailableTimes(fetchAPI(new Date()));
+        }else{
+            setAvailableTimes(fetchAPI(new Date(formik.values.res_date)));
+        }
+    },[formik.values.res_date])
+
     return (
     <form onSubmit={formik.handleSubmit}>
         <FormControl isInvalid={!!formik.errors.res_date && formik.touched.res_date}>
@@ -42,12 +53,7 @@ const BookingForm = () => {
         <FormControl isInvalid={!!formik.errors.res_time && formik.touched.res_time}>
             <FormLabel htmlFor='res-time'>Choose time</FormLabel>
             <Select id='res-time' placeholder='select...' {...formik.getFieldProps("res_time")}>
-                <option>17:00</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
-                <option>22:00</option>
+                {availableTimes.map(time=><option key={time}>{time}</option>)}
             </Select>
             <FormErrorMessage>{formik.errors.res_time}</FormErrorMessage>
         </FormControl>
