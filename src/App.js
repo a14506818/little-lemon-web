@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Main from "./components/Main";
 import About from "./components/About";
 import Booking from './components/Booking';
+import ConfirmedBooking from "./components/ConfirmedBooking";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Main />}></Route>
             <Route path="/About" element={<About />}></Route>
             <Route path="/Reservations" element={<Booking />}></Route>
+            <Route path="/ConfirmedBooking" element={<ConfirmedBooking />}></Route>
           </Routes>
           <Footer />
         </div>

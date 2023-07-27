@@ -12,9 +12,12 @@ import {
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { fetchAPI, submitAPI } from './Api';
+import { useHistory } from 'react-router-dom';
 
 const BookingForm = () => {
-    const [availableTimes, setAvailableTimes] = useState([]);    
+    const [availableTimes, setAvailableTimes] = useState([]);
+
+    const history = useHistory();
 
     const formik = useFormik({
         initialValues: {
@@ -25,7 +28,11 @@ const BookingForm = () => {
         },
 		onSubmit: values => {
 			// run submit function
-            alert(JSON.stringify(values, null, 2));
+            
+            const formDate = JSON.stringify(values, null, 2);
+            console.log(formDate);
+            submitAPI(formDate);
+            history.push('/ConfirmedBooking');
 		},
 		validationSchema: Yup.object().shape({
             res_date: Yup.string().required(),
