@@ -5,4 +5,4 @@ test('Renders the BookingForm heading', () => {
     render(<BookingForm />);
     const headingElement = screen.getByText("Choose date");
     expect(headingElement).toBeInTheDocument();
-})
+});

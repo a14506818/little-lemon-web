@@ -75,6 +75,7 @@ const BookingForm = () => {
                 <option>None</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
+                <option>Other</option>
             </Select>
             <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
         </FormControl>
