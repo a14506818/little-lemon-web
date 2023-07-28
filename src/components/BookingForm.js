@@ -4,7 +4,6 @@ import {
     FormControl,
     FormLabel,
     FormErrorMessage,
-    // FormHelperText,
     Input,
     Select,
     Button,
@@ -12,12 +11,12 @@ import {
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { fetchAPI, submitAPI } from './Api';
-import { useHistory } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 
 const BookingForm = () => {
     const [availableTimes, setAvailableTimes] = useState([]);
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: {
@@ -31,8 +30,9 @@ const BookingForm = () => {
             
             const formDate = JSON.stringify(values, null, 2);
             console.log(formDate);
-            submitAPI(formDate);
-            history.push('/ConfirmedBooking');
+            if (submitAPI(formDate)) {
+                navigate("/ConfirmedBooking");
+            }else{alert('Submit Failed')};
 		},
 		validationSchema: Yup.object().shape({
             res_date: Yup.string().required(),
