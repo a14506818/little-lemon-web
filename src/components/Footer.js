@@ -1,14 +1,15 @@
 import React from "react";
 import Img from "../assets/restauranfood.jpg";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const navList = [
-  "Home",
-  "About",
-  "Menu",
-  "Reservations",
-  "Order Online",
-  "Login",
+  { name: "Home", link: "/" },
+  { name: "About", link: "/About" },
+  { name: "Menu", link: "/Menu" },
+  { name: "Reservations", link: "/Reservations" },
+  { name: "OrderOnline", link: "/OrderOnline" },
+  { name: "Login", link: "/Login" },
 ];
 
 const Footer = () => {
@@ -21,7 +22,7 @@ const Footer = () => {
           {navList.map((item) => {
             return (
               <li key={item}>
-                <a href="">{item}</a>
+                <Link to={item.link}>{item.name}</Link>
               </li>
             );
           })}
@@ -31,13 +32,13 @@ const Footer = () => {
         <h3>Contact</h3>
         <ul>
           <li key="Adress">
-            <a href="">Adress</a>
+            <a href="/">Adress</a>
           </li>
           <li key="Phone Number">
-            <a href="">Phone Number</a>
+            <a href="/">Phone Number</a>
           </li>
           <li key="Email">
-            <a href="">Email</a>
+            <a href="/">Email</a>
           </li>
         </ul>
       </div>
@@ -45,13 +46,13 @@ const Footer = () => {
         <h3>Social Media Links</h3>
         <ul>
           <li key="Adress">
-            <a href="">Adress</a>
+            <a href="/">Adress</a>
           </li>
           <li key="Phone Number">
-            <a href="">Phone Number</a>
+            <a href="/">Phone Number</a>
           </li>
           <li key="Email">
-            <a href="">Email</a>
+            <a href="/">Email</a>
           </li>
         </ul>
       </div>
