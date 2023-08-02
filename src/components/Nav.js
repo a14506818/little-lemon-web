@@ -4,12 +4,12 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 
 const navList = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/About" },
-  { name: "Menu", link: "/Menu" },
-  { name: "Reservations", link: "/Reservations" },
-  { name: "OrderOnline", link: "/OrderOnline" },
-  { name: "Login", link: "/Login" },
+  { name: "Home", link: "/little-lemon-web/" },
+  { name: "About", link: "/little-lemon-web/About" },
+  { name: "Menu", link: "/little-lemon-web/Menu" },
+  { name: "Reservations", link: "/little-lemon-web/Reservations" },
+  { name: "OrderOnline", link: "/little-lemon-web/OrderOnline" },
+  { name: "Login", link: "/little-lemon-web/Login" },
 ];
 
 const Nav = () => {

@@ -19,10 +19,10 @@ function App() {
             <Nav />
           </Header>
           <Routes>
-            <Route path="/" element={<Main />}></Route>
-            <Route path="/About" element={<About />}></Route>
-            <Route path="/Reservations" element={<Booking />}></Route>
-            <Route path="/ConfirmedBooking" element={<ConfirmedBooking />}></Route>
+            <Route path="/little-lemon-web/" element={<Main />}></Route>
+            <Route path="/little-lemon-web/About" element={<About />}></Route>
+            <Route path="/little-lemon-web/Reservations" element={<Booking />}></Route>
+            <Route path="/little-lemon-web/ConfirmedBooking" element={<ConfirmedBooking />}></Route>
           </Routes>
           <Footer />
         </div>
